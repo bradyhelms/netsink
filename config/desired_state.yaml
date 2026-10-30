@@ -1,0 +1,31 @@
+version: 1.0
+organization_id: 1234
+network_id: 5678
+switches:
+  switch:
+    name: SW1
+    switchports:
+      port:
+        portId: 1
+        name: Gi/0/1
+        enabled: true
+        type: access
+        vlan: 10
+        voiceVlan: 20
+        allowedVlans: "1, 3, 5-10"
+        stp:
+          rstpEnabled: true
+          stpGuard: disabled
+          stpPortFastTrunk: false
+      port:
+        portId: 2
+        name: Gi/0/2
+        enabled: true
+        type: trunk
+        vlan: 100
+        voiceVlan: 99
+        allowedVlans: "10, 20"
+        stp:
+          rstpEnabled: true
+          stpGuard: disabled
+          stpPortFastTrunk: false
