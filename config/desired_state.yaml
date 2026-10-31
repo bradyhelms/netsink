@@ -1,12 +1,10 @@
-version: 1.0
-organization_id: 1234
-network_id: 5678
+version: "1.0"
+organization_id: "1234"
+network_id: "5678"
 switches:
-  switch:
-    name: SW1
+  - name: SW1
     switchports:
-      port:
-        portId: 1
+      - portId: 1
         name: Gi/0/1
         enabled: true
         type: access
@@ -17,8 +15,7 @@ switches:
           rstpEnabled: true
           stpGuard: disabled
           stpPortFastTrunk: false
-      port:
-        portId: 2
+      - portId: 2
         name: Gi/0/2
         enabled: true
         type: trunk
